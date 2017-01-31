@@ -1,0 +1,32 @@
+<div>
+    <div>
+        Work In Progress:
+        <ul ng-repeat="activity in activities" ng-if="activity.actStatus=='Pending' && activity.deleted==1">
+            <li>
+                {{activity.actName}}
+                <button tooltip="Delete  {{activity.actName}}" type="button" ng-click="deleteActivity(activity._id)">
+                   &times;</button>
+            </li>
+        </ul>
+    </div>
+</div>
+<div>
+    Completed Work :
+    <div>
+        <div ng-repeat="activity in activities" ng-if="activity.actStatus=='Completed' && activity.deleted==1">
+            {{activity.actName}}
+        </div>
+        <button tooltip="Delete  {{activity.actName}}" type="button" ng-click="deleteActivity(activity._id)">
+                   &times;</button>
+    </div>
+</div>
+
+<div>
+    All:
+    <div ng-repeat="activity in activities" ng-if="activity.deleted==1">
+        {{activity.actName}}
+        <button tooltip="Delete  {{activity.actName}}" type="button" ng-click="deleteActivity(activity._id)">
+                   &times;</button>
+    </div>
+
+</div>

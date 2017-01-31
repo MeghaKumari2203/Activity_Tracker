@@ -1,0 +1,19 @@
+<div>
+    <form ng-submit="addActivity()">
+    Date:
+    <input type="date" ng-model="activity.activityDate" />
+Activity name:
+    <input type="text" ng-model="activity.actName" />
+Description:
+    <input type="text" ng-model="activity.actDesc" />
+Status:
+    <select class="form-control fdjk" name="Category" ng-model="activity.actStatus">
+                                            <option value="Pending">Pending</option>
+                                            <option value="Completed">Completed</option>
+                                        </select>
+Time
+    <input type="text" ng-model="activity.actTime" />
+
+    <input type="submit" value="submit" />
+    </form>
+</div>
