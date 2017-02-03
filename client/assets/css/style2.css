@@ -1,0 +1,53 @@
+body{
+text-align: center;
+padding-top: 5px;
+
+}
+.task h3{
+ margin-top: 0px;
+ color: blue;
+}
+.menudemoBasicUsage .md-menu-demo {
+  padding: 24px; 
+}
+
+.menudemoBasicUsage .menu-demo-container {
+  min-height: 200px; 
+}
+
+md-menu-content {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 8px 0;
+    max-height: 360px;
+    overflow-y: auto;
+}
+
+.md-open-menu-container md-menu-divider {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    height: 1px;
+    width: calc(100% - 20px);
+    position: relative;
+    left: 10px;
+}
+
+.fa {
+    font-size: 19px;
+    margin: auto 16px auto 0;
+    color: black;
+}
+
+.glyphicon {
+    font-size: 19px;
+    margin: auto 16px auto 0;
+    color: black;
+}
+
+.no-set {
+    margin: 0;
+}

@@ -21,4 +21,9 @@ angular.module('activityTrackerApp')
           controller: 'AllCtrl',
           authenticate:true
       })
+       .state('a', {
+        url: '/a',
+        templateUrl: 'app/activity/welcome.html',
+          controller: 'MainCtrl',
+      })
   });

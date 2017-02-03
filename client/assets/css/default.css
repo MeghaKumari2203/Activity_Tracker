@@ -1,0 +1,171 @@
+.background
+{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background: linear-gradient( rgba(17, 18, 27, 0.87), rgb(4, 5, 41) ), url(../../assets/css/img/bck.jpg) !important;
+}
+img.imgwidth {
+    width: 50%;
+    /* padding-bottom: 14px; */
+}
+label.fontlabel {
+    font-size: 16px;
+    color: #256196;
+    font-weight: 200;
+}
+.well.loginview {
+    margin-top:2.5em;
+   background-color: rgba(253, 253, 253, 0) !important;
+   border:none;
+}
+a.links {
+    /*background: #777ab1;*/
+    margin-right: 13px;
+    color: black !important;
+    text-decoration: none !important;
+    font-size: 18px !important;
+    /* padding: 6px; */
+    /* width: 116%; */
+}
+a.links:hover {
+    background:#ffffff !important;
+       color: #7578B8 !important;
+    text-decoration: underline !important;
+    font-size: 18px !important;
+    /* padding: 6px; */
+    /* width: 116%; */
+}
+nav {
+    background: #ffffff;
+}
+.headpart {
+    height: 55px;
+    /*background: #588e8c;*/
+    text-align: center;
+}
+form#loginform {
+    padding: 2em;
+}
+#labeltext {
+    /*color: #ada5a5;*/
+    color:#ffffff;
+    font-size: 18px;
+    margin-left:12px;
+}
+#labeltext1 {
+    /*color: #ada5a5;*/
+    color:#ffffff;
+    font-size: 18px;
+    margin-left:12px;
+}
+#pass {
+    /*color: #ada5a5;*/
+    color:#ffffff;
+    font-size: 18px;
+}
+button#btn {
+    /*background: #58688e;*/
+    background:#a3a0ce;
+}
+/*div#align {
+    margin-bottom: 3em;
+}*/
+a.colorwhite {
+    color: #ffffff;
+}
+a.colorwhite:hover {
+    color: #ffffff;
+}
+input#pname, #email, #uname, #password, #cpass, #designation, #cno {
+    color: #ffffff;
+    font-size: 14px;
+}
+.signupfrm
+{
+    margin-top: 3em;
+}
+
+/*activity tracker details*/
+/*.userview {
+    background-color: rgba(236, 240, 241, 0.36);
+    padding: 20px;
+    padding-left: 3em;
+}*/
+/*.col-md-2.userview {
+    border: 22px solid #52596b;
+}*/
+.actarea.container {
+    margin-top: 3%;
+    /* border-top: 1px solid; */
+}
+#labeltext2 {
+    /*color: #ada5a5;*/
+    color:red;
+    font-size: 18px;
+    margin-left:12px;
+}
+.md-datepicker-input-container.md-datepicker-invalid {
+    border-bottom:1px solid #ffffff !important;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.scroll {
+    overflow-y: scroll;
+    height: 300px;
+    /* width: 300px; */
+}
+md-tabs md-ink-bar {
+    color: rgb(0, 0, 0);
+    background: rgb(117, 120, 184);
+}
+
+.md-button.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab, .md-button.md-primary.md-fab {
+    color: rgba(255,255,255,0.87);
+    background-color: rgb(91, 93, 150);
+}
+
+.footer {
+    line-height: 50px;
+}
+
+.marginzero
+{
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+.listdemoListControls md-divider {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.listdemoListControls md-list {
+  padding-top: 0; }
+
+.listdemoListControls md-list-item > p,
+.listdemoListControls md-list-item > .md-list-item-inner > p,
+.listdemoListControls md-list-item .md-list-item-inner > p,
+.listdemoListControls md-list-item .md-list-item-inner > .md-list-item-inner > p {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */ }
+  .color
+  {
+      color:#ffffff;
+  }

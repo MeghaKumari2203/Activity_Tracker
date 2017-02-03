@@ -101,7 +101,7 @@ exports.destroy = function(req, res) {
     .catch(handleError(res));
 };
 
-exports.getActivities=function(req,res){
+exports.getActivities=function(req,res,next){
   var userId = req.params.id;
  Activity.find({
     'user': userId

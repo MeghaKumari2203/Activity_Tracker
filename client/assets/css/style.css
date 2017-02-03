@@ -1,0 +1,57 @@
+
+.signup{
+	
+   /*background: linear-gradient( rgba(17, 18, 27, 0.87), rgb(4, 5, 41) ), url(img/bck.jpg);*/
+	padding-top: 20px;
+	position: relative;  
+	background-size:no-repeat;
+
+	background-size: cover;
+}
+.signupform h3 {
+	margin-top: 0px;
+	color: #ffffff;
+	text-align: center;
+	text-decoration: none;
+}
+.signupform h5 {
+	color: red;
+	padding-bottom: 10px;
+	text-decoration: underline;
+}
+.logout button{
+	margin-top: 20px;
+}
+.login {
+	
+	padding-top: 14px;
+	
+	/*background: linear-gradient( rgba(101, 90, 90, 0.24), rgba(47, 38, 38, 0.62) ),
+	url(img/bck.jpg);*/
+	    /*background: linear-gradient( rgba(17, 18, 27, 0.87), rgb(4, 5, 41) ), url(img/bck.jpg);*/
+	height:500px;
+	background-size: cover;
+	
+
+}
+.login h3{
+	text-align: center;
+	margin:0px;
+	padding-top:3%;
+	color: #ffffff;
+	text-decoration: none;
+	
+}
+.task h3{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: blue;
+}
+#something {
+	position: relative;    
+	width: 100%;
+	margin: 0 0 0 0px;
+	top: 30%;
+	left: 0%;
+}

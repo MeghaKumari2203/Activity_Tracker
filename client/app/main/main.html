@@ -1,11 +1,157 @@
-<navbar></navbar>
+<!--<navbar></navbar>
 
-<header class="hero-unit" id="banner">
+<header >
   <div class="container">
-    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    
   </div>
-</header>
+</header>-->
 
 
 
-<footer></footer>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Compiled and minified JavaScript -->
+
+  
+  <!--<script src="app1.js"></script>-->
+  <script>  
+$( document ).ready(function(){
+ 
+$(".button-collapse").sideNav();
+})
+
+</script>
+
+
+<div class="background">
+  <section>
+    <nav>
+
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo"><img src="../../assets/images/meme.png" class="imgwidth"></a>
+
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <ul class="right hide-on-med-and-down">
+
+          <li><span ng-click="ShowHide()"><a href="#" class="links">Sign Up</a></span></li>
+          <li><span ng-click="ShowHideLogin()"><a href="#" class="links">Log In</a></span></li>
+
+        </ul>
+        
+      </div>
+    </nav>
+  </section>
+
+
+
+  <section ng-show="loginvisible" class="login">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-push-3">
+          <div class="well loginview">
+            <div class="headpart">
+              <h3 class="text-center color">Log In</h3>
+            </div>
+            <form id="loginform" name="loginform">
+              <md-input-container class="md-block">
+                <label class="fontlabel" id="labeltext1">Username</label>
+                <input name="username" id="labeltext1" ng-model="username" ng-required="true">
+                <div ng-messages="loginform.username.$error">
+                  <div ng-message="required" style="margin-top:-5px" id="align">Username is required.</div>
+                </div>
+              </md-input-container>
+              <md-input-container class="md-block">
+                <label class="fontlabel" id="labeltext1" style="margin-top:2em">Password</label>
+                <input type="password" name="pass" id="pass" ng-model="pass" ng-required="true">
+                <div ng-messages="loginform.pass.$error">
+                  <div ng-message="required">Password is required.</div>
+                </div>
+              </md-input-container>
+              <div class="col-md-8 col-md-push-2">
+                <md-button class="md-raised md-primary" id="btn" ng-disabled="loginform.$invalid" ng-click="userlogin()">Login</md-button>
+                <span ng-click="ShowHide()"> <a href=#  class="colorwhite">New User?Register here
+             </a></span>
+
+            </form>
+            </div>
+          </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <section ng-show="IsVisible" class="signup">
+
+    <form name="myForm" id="something">
+      <div class="container">
+        <div class="row ">
+          <div class="col-md-12 signupform ">
+
+            <h3 class="text-center color">Sign Up</h3>
+            <div class="signupfrm">
+              <md-input-container class="col-md-6 md-block">
+                <label id="labeltext"> Name</label>
+                <input name="pname" id="pname" ng-model="pname" ng-required="true">
+                <div ng-messages="myForm.pname.$error">
+                  <div ng-message="required" id="align">profile name is required.</div>
+                </div>
+              </md-input-container>
+              <md-input-container class="col-md-6 md-block">
+                <label id="labeltext">Email *</label>
+                <input required type="email" id="email" name="userEmail" ng-model="userEmail" minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/"
+                />
+                <div ng-messages="myForm.userEmail.$error" role="alert">
+                  <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']" id="align">
+                    Your email must be between 10 and 100 characters long and should be a valid email address.
+                  </div>
+                </div>
+              </md-input-container>
+              <md-input-container class="col-md-6 md-block">
+                <label id="labeltext">Designation *</label>
+                <input name="designation" id="designation" ng-model="designation" ng-required="true">
+                <div ng-messages="myForm.designation.$error">
+                  <div ng-message="required" id="align">Designation is required.</div>
+                </div>
+              </md-input-container>
+              <md-input-container class="col-md-6 md-block">
+                <label id="labeltext">Contact No</label>
+                <input name="cno" id="cno" ng-model="cno" ng-required="true">
+                <div ng-messages="myForm.cno.$error">
+                  <div ng-message="required" id="align">PhoneNo is required.</div>
+                </div>
+              </md-input-container>
+              <md-input-container class="col-md-6 md-block">
+                <label id="labeltext">Password *</label>
+                <input type="password" name="password" id="password" ng-model="password" ng-required="true">
+                <div ng-messages="myForm.password.$error">
+                  <div ng-message="required" id="align">Password is required.</div>
+                </div>
+              </md-input-container>
+              <md-input-container class="col-md-6 md-block">
+                <label id="labeltext">Confirm Password *</label>
+                <input type="password" name="cpass" id="cpass" ng-model="cpass" ng-required="true">
+                <div ng-messages="myForm.cpass.$error">
+                  <div ng-show="(password !=cpass) && cpass.length >0" id="align"> password do not match! </div>
+                </div>
+              </md-input-container>
+              <div class="text-center">
+                <md-button class="md-raised md-primary" id="btn" ng-disabled="myForm.$invalid || (password !=cpass)" ng-click="signup()">Submit</md-button>
+                <span ng-click="ShowHideLogin()"> <a href=# class="colorwhite">Already Registered, LogIn </a></span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  <footer></footer>
+
+ 
+</div>
+

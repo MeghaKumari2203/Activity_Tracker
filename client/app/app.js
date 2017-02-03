@@ -6,7 +6,11 @@ angular.module('activityTrackerApp', [
   'ngSanitize',
   'btford.socket-io',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ngAnimate',
+  'ngAria',
+  'ngMaterial',
+  'ngMessages'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

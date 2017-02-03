@@ -1,0 +1,245 @@
+
+
+<!--<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Meme Activity Tracker </title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+  <link rel="stylesheet" href="css/default.css">
+
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/angular-material.min.css">
+
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+  <script src="js/angular.min.js"></script>
+
+  <script src="js/angular-animate.min.js"></script>
+
+  <script src="js/angular-aria.min.js"></script>
+
+  <script src="js/angular-messages.min.js"></script>
+
+  <script src="js/angular-material.min.js"></script>
+
+
+  <link rel="stylesheet" href="css/icon.css">
+  <script src="app.js"></script>
+
+</head>-->
+
+<body id="popupContainer" style="bacground:red !important">
+
+  <section style="bacground:red !important">
+
+    <nav class="navbar navbar-default" style="padding-bottom: 71px;!important">
+      <div class="container">
+        <!--<div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="img/meme.png" class="imgwidth"></a>
+    </div>-->
+
+        <a class="navbar-brand" href="#"><img src="../../assets/images/meme.png" class="imgwidth">
+          <ul class="nav navbar-nav navbar-right" style="padding-top:10px">
+            <li><a href="#" class="links"> Sign Up</p></a></li>
+            <li><a href="#" class="links"> Login</a></li>
+            <li>
+              <!--<a href="#" class="links"> <img src="img/settings.png" style="width:70%"></a>-->
+
+
+<div class="md-menu-demo menudemoBasicUsage"  ng-cloak="">
+
+  <div class="menu-demo-container" layout-align="center center" layout="column">
+  
+    <md-menu>
+       
+      <md-button aria-label="Open phone interactions menu" class="md-fab md-mini md-primary" ng-click="openMenu($mdOpenMenu, $event)">
+        <md-icon md-menu-origin="" class="glyphicon glyphicon-cog no-set"></md-icon>
+      </md-button>
+      <md-menu-content width="4">
+        <md-menu-item>
+          <md-button >
+            <i class="fa fa-user"></i>
+            Profile
+          </md-button>
+        </md-menu-item>
+         <md-menu-item>
+          <md-button >
+            <i class="fa fa-user"></i>
+            Profile
+          </md-button>
+        </md-menu-item>
+         <md-menu-item>
+          <md-button >
+            <i class="fa fa-user"></i>
+            Profile
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button ng-click="ctrl.logout($event)">
+            <i class="fa fa-sign-out"></i>
+            Log Out
+          </md-button>
+        </md-menu-item>
+        
+      
+      </md-menu-content>
+    </md-menu>
+  </div>
+</div>
+
+
+              
+            </li>
+          </ul>
+      </div>
+    </nav>
+  </section>
+
+  <section>
+    <div class="actarea container">
+      <div class="row">
+        <div class="col-md-2 userview">
+          <img src="../assets/images/user2.png" class="img-circle img-responsive">
+          <label>Name</label></br>
+          <label>Designation</label>
+
+        </div>
+        <div class="col-md-10 ">
+          <div ng-cloak>
+            <md-content>
+              <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="Add New" class="subhead">
+
+                  <md-content layout-padding>
+                    <form>
+                      <div layout="row">
+                        <md-input-container flex>
+                          <label>Task Name</label>
+                          <input required name="description" ng-model="taskname" class="activityfill">
+                        </md-input-container>
+
+                        <div flex>
+
+                          <md-datepicker ng-model="taskdate" md-placeholder="Enter date"></md-datepicker>
+
+                        </div>
+                      </div>
+
+
+                      <div layout-gt-sm="row">
+                        <md-input-container class="md-block" flex-gt-sm>
+                          <label>Status</label>
+                          <md-select name="type" ng-model="status" required>
+                            <md-option value="app">Pending</md-option>
+                            <md-option value="web">Completed</md-option>
+                          </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                          <label>Project Type</label>
+                          <md-select name="type" ng-model="projecttype" required>
+                            <md-option value="app">UI/UX</md-option>
+                            <md-option value="app">DEVELOPEMENT</md-option>
+                            <md-option value="app">TESTING</md-option>
+                            <md-option value="web">SALES</md-option>
+                          </md-select>
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                          <label>Time</label>
+                          <input required md-no-asterisk name="timereq" ng-model="project.description">
+                        </md-input-container>
+                      </div>
+
+                      <md-input-container class="md-block">
+                        <label>Remarks</label>
+                        <input type="textarea" row="4" name="clientEmail" ng-model="remarks" required/>
+                      </md-input-container>
+                      <div class="text-center">
+                        <md-button type="submit" class="md-raised md-primary md-button md-ink-ripple">Submit</md-button>
+                      </div>
+                    </form>
+                  </md-content>
+                </md-tab>
+                <md-tab label="Work On Progress">
+                  <md-content class="md-padding scroll">
+
+               
+                    <md-list-item ng-repeat="person in people" ng-click="goToPerson(person.name, $event)" class="noright">
+                      <!--<img alt="hh" ng-src="{{ person.img }}" class="md-avatar" />-->
+                      <i class="material-icons" style="margin-right:7px;color:#556080;font-size:19px">assignment</i>
+                      </br>
+                      <br>
+                      <p>{{ person.name }}</p>
+                      <!--<md-icon> face </md-icon>-->
+                      <i class="material-icons" style="margin-right:7px;color:#999;font-size:19px">border_color</i>
+                      <md-icon ng-click="showConfirm($event)"> <i class="material-icons" style="margin-right:7px;color:#999;font-size:19px">delete_forever</i></md-icon>
+                      
+                      <md-icon md-svg-icon="communication:email" ng-click="doSecondaryAction($event)" aria-label="Send Email" class="md-secondary md-hue-3"></md-icon>
+                      <md-icon class="md-secondary" ng-click="showConfirm($event)" aria-label="Chat" md-svg-icon="communication:message"></md-icon>
+                      <md-divider></md-divider>
+                    </md-list-item>
+
+
+                  </md-content>
+                </md-tab>
+                <md-tab label="Completed task">
+                  <md-content class="md-padding scroll">
+                    <md-list-item ng-repeat="person in people" ng-click="goToPerson(person.name, $event)" class="noright">
+                      <!--<img alt="hh" ng-src="{{ person.img }}" class="md-avatar" />-->
+                      <i class="material-icons" style="margin-right:7px;color:#556080;font-size:19px">assignment</i>
+                      </br>
+                      <br>
+                      <p>{{ person.name }}</p>
+                      <!--<md-icon> face </md-icon>-->
+                        <i class="material-icons"style="margin-right:7px;color:#999;font-size:19px" >border_color</i>
+                      <md-icon ng-click="showConfirm($event)"> <i class="material-icons" style="margin-right:7px;color:#999;font-size:19px">delete_forever</i></md-icon>
+                      
+                      <md-icon md-svg-icon="communication:email" ng-click="doSecondaryAction($event)" aria-label="Send Email" class="md-secondary md-hue-3"></md-icon>
+                      <md-icon class="md-secondary" ng-click="showConfirm($event)" aria-label="Chat" md-svg-icon="communication:message"></md-icon>
+                      <md-divider></md-divider>
+                    </md-list-item>
+
+                  </md-content>
+                </md-tab>
+                <md-tab label="View All">
+                  <md-content class="md-padding scroll">
+                     <md-list-item ng-repeat="person in people" ng-click="goToPerson(person.name, $event)" class="noright">
+                      <!--<img alt="hh" ng-src="{{ person.img }}" class="md-avatar" />-->
+                      <i class="material-icons" style="margin-right:7px;color:#556080;font-size:19px">assignment</i>
+                      </br>
+                      <br>
+                      <p>{{ person.name }}</p>
+                      <!--<md-icon> face </md-icon>-->
+                        <i class="material-icons" style="margin-right:7px;color:#999;font-size:19px">border_color</i>
+                      <md-icon ng-click="showConfirm($event)"> <i class="material-icons" style="margin-right:7px;color:#999;font-size:19px">delete_forever</i></md-icon>
+                      
+                      <md-icon md-svg-icon="communication:email" ng-click="doSecondaryAction($event)" aria-label="Send Email" class="md-secondary md-hue-3"></md-icon>
+                      <md-icon class="md-secondary" ng-click="showConfirm($event)" aria-label="Chat" md-svg-icon="communication:message"></md-icon>
+                      <md-divider></md-divider>
+                    </md-list-item>
+
+                  </md-content>
+                </md-tab>
+              </md-tabs>
+            </md-content>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+</body>
+
