@@ -1,11 +1,21 @@
+
 .background
 {
+   
+    background: linear-gradient( 
+        rgba(17, 18, 27, 0.87),
+        rgb(4, 5, 41) ), 
+    url(../../assets/css/img/bck.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
-    background: linear-gradient( rgba(17, 18, 27, 0.87), rgb(4, 5, 41) ), url(../../assets/css/img/bck.jpg) !important;
+   background-size: cover;
+     height: 100vh;
+}
+#pname, #email, #designation, #cno, #password, #cpass, #username, #pass
+{
+  border-color:rgb(197, 197, 197);
 }
 img.imgwidth {
-    width: 50%;
+    width: 40%;
     /* padding-bottom: 14px; */
 }
 label.fontlabel {
@@ -24,11 +34,12 @@ a.links {
     color: black !important;
     text-decoration: none !important;
     font-size: 18px !important;
+    cursor: pointer;
     /* padding: 6px; */
     /* width: 116%; */
 }
 a.links:hover {
-    background:#ffffff !important;
+    background:#fff !important;
        color: #7578B8 !important;
     text-decoration: underline !important;
     font-size: 18px !important;
@@ -36,7 +47,7 @@ a.links:hover {
     /* width: 116%; */
 }
 nav {
-    background: #ffffff;
+    background: rgb(197, 197, 197);
 }
 .headpart {
     height: 55px;
@@ -48,37 +59,44 @@ form#loginform {
 }
 #labeltext {
     /*color: #ada5a5;*/
-    color:#ffffff;
+    color:rgb(197, 197, 197);
     font-size: 18px;
     margin-left:12px;
+    font-weight: normal;
 }
 #labeltext1 {
     /*color: #ada5a5;*/
-    color:#ffffff;
+    color:rgb(197, 197, 197);
     font-size: 18px;
     margin-left:12px;
+     font-weight: normal;
 }
 #pass {
     /*color: #ada5a5;*/
-    color:#ffffff;
+  color:rgb(197, 197, 197);
     font-size: 18px;
+      font-weight: normal;
 }
 button#btn {
     /*background: #58688e;*/
-    background:#a3a0ce;
+    background:rgba(130, 125, 204, 0.82);
 }
 /*div#align {
     margin-bottom: 3em;
 }*/
 a.colorwhite {
-    color: #ffffff;
+    color:#fff;
+      font-weight: normal;
 }
 a.colorwhite:hover {
-    color: #ffffff;
+    color:#fff;
+    /*color: rgb(197, 197, 197);*/
+      font-weight: normal;
 }
 input#pname, #email, #uname, #password, #cpass, #designation, #cno {
-    color: #ffffff;
+    color: rgb(197, 197, 197);
     font-size: 14px;
+      font-weight: normal;
 }
 .signupfrm
 {
@@ -105,7 +123,7 @@ input#pname, #email, #uname, #password, #cpass, #designation, #cno {
     margin-left:12px;
 }
 .md-datepicker-input-container.md-datepicker-invalid {
-    border-bottom:1px solid #ffffff !important;
+    border-bottom:1px solid rgb(197, 197, 197) !important;
 }
 footer {
     position: absolute;
@@ -124,9 +142,11 @@ md-tabs md-ink-bar {
 }
 
 .md-button.md-primary.md-raised, .md-button.md-default-theme.md-primary.md-fab, .md-button.md-primary.md-fab {
-    color: rgba(255,255,255,0.87);
+    color: rgba(255,255,255,0.87) !important;
     background-color: rgb(91, 93, 150);
+    font-weight: normal;
 }
+
 
 .footer {
     line-height: 50px;
@@ -167,5 +187,9 @@ md-tabs md-ink-bar {
   /* Likely future */ }
   .color
   {
-      color:#ffffff;
+      color:rgb(197, 197, 197);
   }
+
+.md-button.md-raised:not([disabled]) {
+    border-color: rgb(197, 197, 197) !important;
+}

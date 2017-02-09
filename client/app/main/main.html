@@ -1,22 +1,8 @@
-<!--<navbar></navbar>
-
-<header >
-  <div class="container">
-    
-  </div>
-</header>-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
-
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Compiled and minified JavaScript -->
-
-  
-  <!--<script src="app1.js"></script>-->
-  <script>  
+<script>  
 $( document ).ready(function(){
  
 $(".button-collapse").sideNav();
@@ -26,24 +12,57 @@ $(".button-collapse").sideNav();
 
 
 <div class="background">
-  <section>
-    <nav>
 
-      <div class="nav-wrapper container">
-        <a href="#!" class="brand-logo"><img src="../../assets/images/meme.png" class="imgwidth"></a>
 
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+  <!--<nav class="navbar navbar-default">
+    <div class="container">
 
-        <ul class="right hide-on-med-and-down">
+      <a class="navbar-brand" href="#"><img src="../../assets/images/meme.png" class="imgwidth"></a>
+      <ul class="nav navbar-nav navbar-right" style="padding-top:10px">
+        <li><a ng-click="ShowHide()" class="links"> Sign Up</a></li>
+        <li><a ng-click="ShowHideLogin()" class="links"> Login</a></li>
+        <li>
+          <div class="md-menu-demo menudemoBasicUsage" ng-cloak="">
+            <div class="menu-demo-container" layout-align="center center" layout="column">
+              <md-menu>
+                <span ng-click="openMenu($mdOpenMenu, $event)">
+     <i class="material-icons" style="padding-top:6px">settings</i>
+      </span>
 
-          <li><span ng-click="ShowHide()"><a href="#" class="links">Sign Up</a></span></li>
-          <li><span ng-click="ShowHideLogin()"><a href="#" class="links">Log In</a></span></li>
+                <md-menu-content width="4">
+                  <md-menu-item>
+                    <md-button>
+                      <i class="fa fa-user"></i> Profile
+                    </md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button>
+                      <i class="fa fa-user"></i> Forgot Password
+                    </md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button>
+                      <i class="fa fa-user"></i> Other
+                    </md-button>
+                  </md-menu-item>
+                  <md-menu-item>
+                    <md-button ng-click="ctrl.logout($event)">
+                      <i class="fa fa-sign-out"></i> Log Out
+                    </md-button>
+                  </md-menu-item>
 
-        </ul>
-        
-      </div>
-    </nav>
-  </section>
+
+                </md-menu-content>
+              </md-menu>
+            </div>
+          </div>
+
+        </li>
+      </ul>
+    </div>
+  </nav>-->
+  <navbar></navbar>
+
 
 
 
@@ -57,14 +76,14 @@ $(".button-collapse").sideNav();
             </div>
             <form id="loginform" name="loginform">
               <md-input-container class="md-block">
-                <label class="fontlabel" id="labeltext1">Username</label>
-                <input name="username" id="labeltext1" ng-model="username" ng-required="true">
+                <label class="fontlabel normal" id="labeltext1">Username</label>
+                <input name="username" id="email" ng-model="username" ng-required="true" />
                 <div ng-messages="loginform.username.$error">
                   <div ng-message="required" style="margin-top:-5px" id="align">Username is required.</div>
                 </div>
               </md-input-container>
               <md-input-container class="md-block">
-                <label class="fontlabel" id="labeltext1" style="margin-top:2em">Password</label>
+                <label class="fontlabel " id="labeltext1" style="margin-top:2em">Password</label>
                 <input type="password" name="pass" id="pass" ng-model="pass" ng-required="true">
                 <div ng-messages="loginform.pass.$error">
                   <div ng-message="required">Password is required.</div>
@@ -74,17 +93,16 @@ $(".button-collapse").sideNav();
                 <md-button class="md-raised md-primary" id="btn" ng-disabled="loginform.$invalid" ng-click="userlogin()">Login</md-button>
                 <span ng-click="ShowHide()"> <a href=#  class="colorwhite">New User?Register here
              </a></span>
-
+              </div>
             </form>
-            </div>
-          </div>
+            <!--</div>
+        </div>-->
 
-          </form>
-        </div>
-      </div>
-    </div>
-    </div>
+            <!--</form>-->
+
+
   </section>
+
   <section ng-show="IsVisible" class="signup">
 
     <form name="myForm" id="something">
@@ -95,7 +113,7 @@ $(".button-collapse").sideNav();
             <h3 class="text-center color">Sign Up</h3>
             <div class="signupfrm">
               <md-input-container class="col-md-6 md-block">
-                <label id="labeltext"> Name</label>
+                <label id="labeltext" classs="normal"> Name</label>
                 <input name="pname" id="pname" ng-model="pname" ng-required="true">
                 <div ng-messages="myForm.pname.$error">
                   <div ng-message="required" id="align">profile name is required.</div>
@@ -140,8 +158,8 @@ $(".button-collapse").sideNav();
                 </div>
               </md-input-container>
               <div class="text-center">
-                <md-button class="md-raised md-primary" id="btn" ng-disabled="myForm.$invalid || (password !=cpass)" ng-click="signup()">Submit</md-button>
-                <span ng-click="ShowHideLogin()"> <a href=# class="colorwhite">Already Registered, LogIn </a></span>
+                <md-button class="md-raised md-primary color" id="btn" ng-disabled="myForm.$invalid || (password !=cpass)" ng-click="signup()">Submit</md-button>
+                <span ng-click="ShowHideLogin()"> <a href=# class="colorwhite">Already Registered , LogIn </a></span>
 
               </div>
             </div>
@@ -150,8 +168,7 @@ $(".button-collapse").sideNav();
       </div>
     </form>
   </section>
-  <footer></footer>
+  </div>
 
- 
-</div>
+  <footer></footer>
 
