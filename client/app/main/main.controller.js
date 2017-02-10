@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('activityTrackerApp')
-  .controller('MainCtrl', function($scope, $http, socket,$mdDialog) {
- 
- 
-
-
-
-//   var app = angular.module('myApp', ['ngAnimate', 'ngAria', 'ngMaterial', 'ngMessages']);
-// app.controller('myController', function ($scope,$mdDialog) { 
+  .controller('MainCtrl', function($scope, $http, socket,$mdDialog,Auth,$state,Activity) {
+    $scope.isLoggedIn=Auth.isLoggedIn();
+    if($scope.isLoggedIn){
+      $state.go('a');
+    }
+    else{
+      $state.go('main');
+    }
 	$scope.IsVisible = false;
 	$scope.loginvisible = true;
 	$scope.ShowHide = function () {                
@@ -19,17 +19,29 @@ angular.module('activityTrackerApp')
 		$scope.loginvisible =$scope.loginvisible ? false : true;
 		$scope.IsVisible = false;
 	}   
-  $scope.people = [
-    { name: 'Janet Perkins', newMessage: true },
-    { name: 'Mary Johnson',  newMessage: false },
-    { name: 'Peter Carlsson', newMessage: false }
-  ];
+  
+  $scope.activity = {};
+    $scope.activity.user = Auth.getCurrentUser();
+    if($scope.isLoggedIn){
+    $http.get('/api/activities/getUserActi/' + $scope.activity.user._id)
+      .then(function (activity) {
+        $scope.activities = activity.data;
+      });
+    };
+    $scope.deleteActivity = function (act) {
+     act.deleted = 0;
+      return Activity.update({ id: act._id },act).$promise
+      .then(function success(/* value, responseHeaders */) {
+          debugger;
+          $state.go('a');
+        }, errorHandler($scope));
+    };
 
-  $scope.goToPerson = function(person, event) {
+  $scope.goToActivity = function(act, event) {
     $mdDialog.show(
       $mdDialog.alert()
-        .title('Navigating')
-        .textContent('Inspect ' + person)
+        .title(act.actName+" Created On "+act.activityDate)
+        .textContent(act.actDesc)
         .ariaLabel('Person inspect demo')
         .ok('OK!')
         .targetEvent(event)
@@ -62,7 +74,8 @@ angular.module('activityTrackerApp')
     
 	 $scope.showConfirm();
   };
-  $scope.showConfirm = function(ev) {
+  $scope.showConfirm = function(act,ev) {
+    debugger;
     // Appending dialog to document.body to cover sidenav in docs app
     var confirm = $mdDialog.confirm()
           .title('Would you like to delete your task?')
@@ -72,7 +85,7 @@ angular.module('activityTrackerApp')
           .ok('Delete')
           .cancel('Cancel');
 
-    $mdDialog.show(confirm).then(function() {
+    $mdDialog.show(confirm).then(function(act) {
      // $scope.status = 'You decided to get rid of your debt.';
     }, function() {
     //  $scope.status = 'You decided to keep your debt.';

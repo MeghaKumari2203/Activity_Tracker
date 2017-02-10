@@ -9,6 +9,7 @@ var ActivitySchema = new Schema({
     required: true,
     ref: 'User'
   },
+  type:String,
   actName: String,
   actDesc:String,
   activityDate:Date,

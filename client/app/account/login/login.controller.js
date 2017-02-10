@@ -6,6 +6,7 @@ angular.module('activityTrackerApp')
     $scope.errors = {};
 
     $scope.login = function(form) {
+      debugger;
       $scope.submitted = true;
 
       if (form.$valid) {
@@ -14,8 +15,8 @@ angular.module('activityTrackerApp')
           password: $scope.user.password
         })
         .then(function() {
-          // Logged in, redirect to home
-          $state.go('main');
+          // Logged in, redirect to activityTracker
+          $state.go('a');
         })
         .catch(function(err) {
           $scope.errors.other = err.message;

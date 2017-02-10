@@ -3,34 +3,35 @@
 
       <a class="navbar-brand" href="#"><img src="../../assets/images/meme.png" class="imgwidth"></a>
       <ul class="nav navbar-nav navbar-right" style="padding-top:10px">
-        <li><a ng-click="ShowHide()" class="links"> Sign Up</a></li>
-        <li><a ng-click="ShowHideLogin()" class="links"> Login</a></li>
+        <li><a class="links"> About</a></li>
+        <li><a ng-click="ShowHide()" ng-hide="isLoggedIn()" class="links"> Sign Up</a></li>
+        <li><a ng-click="ShowHideLogin()" ng-hide="isLoggedIn()" class="links"> Login</a></li>
         <li>
           <div class="md-menu-demo menudemoBasicUsage" ng-cloak="">
             <div class="menu-demo-container" layout-align="center center" layout="column">
               <md-menu>
-                <span ng-click="openMenu($mdOpenMenu, $event)">
+                <span ng-show="isLoggedIn()" ng-click="openMenu($mdOpenMenu, $event)">
      <i class="material-icons" style="padding-top:6px">settings</i>
       </span>
 
                 <md-menu-content width="4">
-                  <md-menu-item>
+                  <!--<md-menu-item>
                     <md-button>
                       <i class="fa fa-user"></i> Profile
                     </md-button>
-                  </md-menu-item>
+                  </md-menu-item>-->
                   <md-menu-item>
-                    <md-button>
-                      <i class="fa fa-user"></i> Forgot Password
+                    <md-button ui-sref="settings">
+                      <i class="fa fa-user"></i> Change Password
                     </md-button>
                   </md-menu-item>
-                  <md-menu-item>
+                  <!--<md-menu-item>
                     <md-button>
                       <i class="fa fa-user"></i> Other
                     </md-button>
-                  </md-menu-item>
+                  </md-menu-item>-->
                   <md-menu-item>
-                    <md-button ng-click="ctrl.logout($event)">
+                    <md-button ui-sref="logout">
                       <i class="fa fa-sign-out"></i> Log Out
                     </md-button>
                   </md-menu-item>

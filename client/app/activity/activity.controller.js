@@ -2,7 +2,8 @@
 
 var errorHandler;
 angular.module('activityTrackerApp')
-  .controller('AllCtrl', function ($scope, $http, Auth, Activity,$state) {
+  .controller('AllCtrl', function ($scope, $http, Auth, Activity,$state, socket,$mdDialog) {
+    
     $scope.activity = {};
     $scope.info = "Delete" + $scope.activity.actName;
     $scope.activity.user = Auth.getCurrentUser();
@@ -27,12 +28,14 @@ angular.module('activityTrackerApp')
   })
   .controller('ActivityNewCtrl',
   function ($scope, $state, Activity, Auth) {
+    $scope.message='';
     $scope.activity = {}; // create a new instance 
     $scope.activity.user = Auth.getCurrentUser();
     $scope.addActivity = function () {
       Activity.save($scope.activity,
         function success(value /*, responseHeaders*/) {
-          $state.go('viewActivity', { id: value._id });
+           $scope.message="Activity Added Successfully.To Check Move To Other Tabs";
+           $scope.activity=null;
         }, errorHandler($scope));
     };
   })

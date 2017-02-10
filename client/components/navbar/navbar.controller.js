@@ -6,7 +6,7 @@ angular.module('activityTrackerApp')
       'title': 'Home',
       'state': 'main'
     }];
-
+    $scope.User = Auth.getCurrentUser();
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;

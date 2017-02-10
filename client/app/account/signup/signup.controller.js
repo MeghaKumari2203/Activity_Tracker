@@ -6,6 +6,7 @@ angular.module('activityTrackerApp')
     $scope.errors = {};
 
     $scope.register = function(form) {
+      debugger;
       $scope.submitted = true;
 
       if (form.$valid) {

@@ -35,7 +35,7 @@ angular.module('activityTrackerApp', [
       // Intercept 401s and redirect you to login
       responseError: function (response) {
         if (response.status === 401) {
-          (state || (state = $injector.get('$state'))).go('login');
+          (state || (state = $injector.get('$state'))).go('main');
           // remove any stale tokens
           $cookies.remove('token');
           return $q.reject(response);
@@ -54,7 +54,7 @@ angular.module('activityTrackerApp', [
         Auth.isLoggedIn(function (loggedIn) {
           if (!loggedIn) {
             event.preventDefault();
-            $state.go('login');
+            $state.go('main');
           }
         });
       }
