@@ -19,7 +19,8 @@ angular.module('activityTrackerApp')
         })
         .then(function() {
           // Account created, redirect to home
-          $state.go('main');
+          $state.go('a');
+          $state.reload();
         })
         .catch(function(err) {
           err = err.data;

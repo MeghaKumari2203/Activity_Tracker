@@ -34,6 +34,7 @@ angular.module('activityTrackerApp')
     $scope.addActivity = function () {
       Activity.save($scope.activity,
         function success(value /*, responseHeaders*/) {
+          $state.reload();
            $scope.message="Activity Added Successfully.To Check Move To Other Tabs";
            $scope.activity=null;
         }, errorHandler($scope));

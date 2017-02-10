@@ -110,11 +110,11 @@ $(".button-collapse").sideNav();
               <label id="labeltext">Confirm Password *</label>
               <input type="password" name="cpass" id="cpass" ng-model="cpass" ng-required="true">
               <div ng-messages="myForm.cpass.$error">
-                <div ng-show="(password !=cpass) && cpass.length >0" id="align"> password do not match! </div>
+                <div ng-show="(user.password !=cpass) && cpass.length >0" id="align"> password do not match! </div>
               </div>
             </md-input-container>
             <div class="text-center">
-              <md-button class="md-raised md-primary color" id="btn" ng-disabled="myForm.$invalid || (password !=cpass)" ng-click="signup()">Submit</md-button>
+              <md-button type="Submit" class="md-raised md-primary color" id="btn" ng-disabled="myForm.$invalid || (user.password !=cpass)">Submit</md-button>
               <span ng-click="ShowHideLogin()"> <a href=# class="colorwhite">Already Registered , LogIn </a></span>
 
             </div>
